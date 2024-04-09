@@ -24,8 +24,8 @@ const createProduct = async (req, res) => {
 // get all products
 const getAllProducts = async (req, res) => {
   // pagination
-  const page = Number(req.query.page);
-  const limit = Number(req.query.limit);
+  const page = Number(req.query.page) || 1;
+  const limit = Number(req.query.limit) || 10;
   // if (!page || !limit) {
   //   throw new BadRequest("Please provide the page and limit query parameters");
   // }
